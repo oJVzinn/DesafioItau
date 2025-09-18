@@ -1,5 +1,6 @@
 package com.github.ojvzinn.desafioitau.configuration;
 
+import com.github.ojvzinn.desafioitau.service.LogService;
 import com.github.ojvzinn.desafioitau.service.TransactionService;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -12,5 +13,8 @@ public class AppConfiguration {
         return new TransactionService();
     }
 
-
+    @Bean
+    public LogService logService() {
+        return new LogService();
+    }
 }
